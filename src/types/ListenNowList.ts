@@ -1,10 +1,4 @@
 export interface ListenNowList {
 	label: string
-	icon: ({
-		principal,
-		secondary,
-	}: {
-		principal?: string
-		secondary?: string
-	}) => JSX.Element
+	icon: React.ComponentType<{ principal?: string; secondary?: string }>
 }

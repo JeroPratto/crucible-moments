@@ -2,8 +2,8 @@ export const YoutubeIcon = ({
 	principal = '#fff',
 	secondary = '#000',
 }: {
-	principal: string
-	secondary: string
+	principal?: string
+	secondary?: string
 }) => {
 	return <YoutubeComponent principal={principal} secondary={secondary} />
 }
