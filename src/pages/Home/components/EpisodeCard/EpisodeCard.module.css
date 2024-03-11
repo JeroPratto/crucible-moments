@@ -44,8 +44,8 @@
 .imageAndLinksContainer:hover {
 	.goToEpisode {
 		background-color: #fff;
-		color: #000;
 		border-color: #fff;
+		color: #000;
 	}
 	.containerAudio {
 		opacity: 1;
@@ -80,6 +80,9 @@
 .icon:hover {
 	background-color: #fff;
 	color: #000;
+	path {
+		fill: #000;
+	}
 }
 .icon svg {
 	width: 1rem;

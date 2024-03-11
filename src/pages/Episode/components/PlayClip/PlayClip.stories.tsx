@@ -8,6 +8,12 @@ const meta = {
 	tags: ['autodocs'],
 	parameters: {
 		layout: 'fullscreen',
+		backgrounds: {
+			values: [
+				{ name: 'white', value: '#fff' },
+				{ name: 'yellow', value: 'rgb(250, 178, 58)' },
+			],
+		},
 	},
 	argTypes: {
 		title: { control: 'text' },
@@ -29,6 +35,11 @@ const ArgsMock = {
 }
 export const Default = {
 	args: { ...ArgsMock },
+	parameters: {
+		backgrounds: {
+			default: 'yellow',
+		},
+	},
 	play: async ({ args, canvasElement }) => {
 		const canvas = within(canvasElement)
 		const title = canvas.getByText(ArgsMock.title)
@@ -44,5 +55,7 @@ export const Default = {
 		expect(button.ariaLabel === 'Play Clip').toBe(true)
 		await userEvent.click(button)
 		expect(button.ariaLabel === 'Pause Clip').toBe(true)
+		await userEvent.click(button)
+		expect(button.ariaLabel === 'Play Clip').toBe(true)
 	},
 } satisfies Story

@@ -1,9 +1,9 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 import Home from './pages/Home/Home'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import { Suspense, lazy } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { Loader } from './components/Loader'
 
 function App() {
@@ -11,6 +11,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Suspense fallback={<Loader />}>
+				<ScrollTop />
 				<Header />
 				<Routes>
 					<Route path='/' element={<Home />} />
@@ -23,3 +24,11 @@ function App() {
 }
 
 export default App
+
+const ScrollTop = () => {
+	const { pathname } = useLocation()
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [pathname])
+	return null
+}
