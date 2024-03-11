@@ -1,0 +1,1 @@
+export { default as EpisodeHero } from './EpisodeHero';

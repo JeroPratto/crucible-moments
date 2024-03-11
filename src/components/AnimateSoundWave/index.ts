@@ -1,0 +1,1 @@
+export { default as AnimateSoundWave } from './AnimateSoundWave';

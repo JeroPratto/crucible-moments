@@ -1,0 +1,103 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+}
+.container {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 100px 0 80px;
+	height: 80px;
+	width: 100%;
+	max-width: 1280px;
+}
+
+.container.home {
+	justify-content: flex-end;
+}
+.returnHome,
+.allEpisodes {
+	width: 150px;
+	height: 36px;
+	background-color: #fff;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 0.75rem;
+	font-weight: 500;
+	position: relative;
+	text-align: center;
+	letter-spacing: -0.01rem;
+	border-radius: 100px;
+	transition: all 0.2s;
+	border: 0;
+	cursor: pointer;
+}
+.returnHome img {
+	margin-top: 2px;
+	position: absolute;
+	left: 35px;
+}
+.returnHome a {
+	width: 100%;
+}
+.returnHome:hover img {
+	left: 30px;
+}
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.linkIcon {
+	border: 1px solid #000;
+	border-radius: 200px;
+	padding: 0.75rem;
+	transform: all 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+}
+.linkIcon img {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		padding: 0 5%;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.linkIcon {
+		display: none;
+	}
+	.returnHome {
+		width: 35px;
+	}
+	.returnHome a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.returnHome img {
+		left: auto;
+		position: static;
+		margin-top: 0;
+	}
+	.returnHome span {
+		display: none;
+	}
+	.returnHome:hover img {
+		left: auto;
+	}
+}

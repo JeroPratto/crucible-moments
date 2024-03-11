@@ -1,0 +1,81 @@
+.trailer {
+	padding: 0 5%;
+}
+.hidden {
+	z-index: -1;
+	opacity: 0;
+	visibility: hidden;
+}
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-top: 0.5rem;
+}
+.playAndPause {
+	width: 250px;
+	height: auto;
+	max-width: none;
+	min-height: 65px;
+	background-color: #fff;
+	padding-left: 34px;
+	padding-right: 34px;
+	box-shadow: 0 0 80px rgba(255, 255, 255, 0.4);
+	border-radius: 200px;
+	color: #000;
+	letter-spacing: -0.01rem;
+	text-transform: uppercase;
+	justify-content: center;
+	font-size: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	position: relative;
+	border: none;
+	z-index: 2;
+}
+.controlsAndQuote {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	max-width: 48rem;
+	margin: 0 auto;
+	padding: 5rem 0;
+}
+.title {
+	margin-bottom: 1rem;
+	letter-spacing: -0.003rem;
+	font-size: 1.125rem;
+	line-height: 1.5;
+	text-align: center;
+}
+.quote {
+	text-align: center;
+	letter-spacing: -0.02rem;
+	font-size: 2.5rem;
+	line-height: 1.2;
+}
+
+@media screen and (max-width: 767px) {
+	.title {
+		font-size: 0.9rem;
+	}
+	.quote {
+		font-size: 1.5rem;
+	}
+	.playAndPause {
+		width: 200px;
+		min-height: 50px;
+		font-size: 1rem;
+	}
+	.playAndPause img {
+		height: 20px;
+	}
+}

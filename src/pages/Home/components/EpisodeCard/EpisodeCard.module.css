@@ -1,0 +1,239 @@
+.container {
+	border-radius: 2rem;
+	padding-bottom: 24px;
+	position: relative;
+	width: 100%;
+	max-width: 80rem;
+	margin: 0 auto;
+}
+
+.title {
+	color: #000;
+	z-index: 2;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 36px 0;
+	text-align: center;
+	letter-spacing: -0.02rem;
+	text-transform: none;
+	font-size: 3rem;
+	font-weight: 400;
+	line-height: 1.2;
+}
+.title span {
+	margin-top: 12px;
+	margin-right: 12px;
+	font-size: 1.25rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.imageAndLinksContainer {
+	max-width: 95%;
+	border-radius: 2rem;
+	margin: 0 auto;
+	padding-top: 65%;
+	transition: all 0.3s;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+	z-index: 2;
+}
+.imageAndLinksContainer:hover {
+	.goToEpisode {
+		background-color: #fff;
+		color: #000;
+		border-color: #fff;
+	}
+	.containerAudio {
+		opacity: 1;
+	}
+}
+.imageAndLinksContainer:hover + .background {
+	transform: scale3d(2, 2, 1);
+}
+.links {
+	z-index: 3;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 36px;
+	position: absolute;
+	bottom: 36px;
+}
+.list {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	color: #fff;
+}
+.icon:hover {
+	background-color: #fff;
+	color: #000;
+}
+.icon svg {
+	width: 1rem;
+	height: 1rem;
+}
+.goToEpisode {
+	transition: all 0.5s;
+	height: 48px;
+	color: #fff;
+	letter-spacing: -0.01rem;
+	background-color: transparent;
+	border: 1px solid #fff;
+	font-weight: 500;
+	border-radius: 100px;
+	padding: 0.75rem 1.5rem;
+	font-size: 0.875rem;
+	line-height: 1;
+	z-index: 3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bgImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+}
+
+.background {
+	z-index: 1;
+	border-radius: 2rem;
+	margin-bottom: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: blue;
+	transition: all 0.5s ease-in-out;
+}
+
+.containerAudio {
+	transition: all 0.5s;
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.containerAudio audio {
+	z-index: -1;
+	opacity: 0;
+}
+.containerAudio.play {
+	opacity: 1;
+	.playAndPause {
+		background-color: #fff;
+	}
+}
+.controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.playAndPause {
+	width: 86px;
+	height: 86px;
+	cursor: pointer;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 100%;
+	margin-right: 10px;
+	padding-left: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: all 0.2s;
+	background-color: transparent;
+	transform: translateY(-10px);
+}
+.playAndPause:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.playAndPause img {
+	height: 19px;
+	max-width: 100%;
+	display: inline-block;
+}
+.arrrowMobile {
+	display: none;
+}
+
+@media screen and (max-width: 767px) {
+	.title {
+		flex-direction: column;
+		padding: 24px 12px;
+	}
+	.imageAndLinksContainer {
+		padding-top: 100%;
+	}
+	.imageAndLinksContainer:hover {
+		.containerAudio {
+			opacity: 0;
+		}
+	}
+	.links {
+		padding-left: 24px;
+		padding-right: 24px;
+		bottom: 24px;
+	}
+	.goToEpisode {
+		background-color: #fff;
+		color: #000;
+		font-weight: 400;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.imageAndLinksContainer:hover + .background {
+		transform: none;
+	}
+	.arrrowMobile {
+		display: flex;
+		margin-left: 8px;
+		margin-top: -1px;
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.title {
+		padding-top: 18px;
+		padding-bottom: 18px;
+		font-size: 2.25rem;
+	}
+	.imageAndLinksContainer {
+		padding-top: 120%;
+	}
+	.links {
+		flex-direction: column;
+		gap: 16px;
+	}
+	.list {
+		width: 100%;
+		justify-content: space-between;
+	}
+	.goToEpisode {
+		width: 100%;
+	}
+}
