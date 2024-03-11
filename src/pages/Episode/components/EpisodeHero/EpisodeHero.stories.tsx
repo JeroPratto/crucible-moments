@@ -26,7 +26,7 @@ const ArgsMock = {
 
 export const Default = {
 	args: { title: ArgsMock.title, urlImage: ArgsMock.urlImage },
-	play: async ({ args, canvasElement }) => {
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		const title = canvas.getByText(ArgsMock.title)
 		const image = canvas.getByTestId('episode-hero-image') as HTMLImageElement

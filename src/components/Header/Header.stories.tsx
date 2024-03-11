@@ -30,7 +30,7 @@ export const Home = {
 			location: { path: '/' },
 		}),
 	},
-	play: async ({ args, canvasElement }) => {
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		const HomeButton = canvas.queryByTestId('return-home-button')
 		const AllEpisodes = canvas.getByTestId('button-all-episodes')
@@ -51,7 +51,7 @@ export const NotInHome = {
 			routing: { path: '/test' },
 		}),
 	},
-	play: ({ args, canvasElement }) => {
+	play: ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		const button = canvas.queryByTestId('return-home-button')
 		expect(button).toBeInTheDocument()

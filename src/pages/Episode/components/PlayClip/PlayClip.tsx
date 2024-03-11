@@ -9,14 +9,16 @@ export type PlayClipProps = {
 }
 
 const PlayClip: React.FC<PlayClipProps> = ({ quote, title, audioUrl }) => {
-	const refAudio = useRef(null)
+	const refAudio = useRef<HTMLAudioElement>(null)
 	const handleAudio = () => {
-		if (isPlay) {
-			refAudio.current!.pause()
-			setPlay(false)
-		} else {
-			refAudio.current!.play()
-			setPlay(true)
+		if (refAudio.current) {
+			if (isPlay) {
+				refAudio.current.pause()
+				setPlay(false)
+			} else {
+				refAudio.current.play()
+				setPlay(true)
+			}
 		}
 	}
 	const [isPlay, setPlay] = useState(false)

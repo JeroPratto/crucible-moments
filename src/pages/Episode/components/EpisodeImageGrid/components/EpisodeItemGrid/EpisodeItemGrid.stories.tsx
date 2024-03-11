@@ -29,7 +29,7 @@ const ArgsMock = {
 
 export const TitleAndDesc = {
 	args: { ...ArgsMock },
-	play: async ({ args, canvasElement }) => {
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		const title = canvas.getByText(ArgsMock.title)
 		const desc = canvas.getByText(ArgsMock.desc)
@@ -47,22 +47,24 @@ export const TitleAndDesc = {
 
 export const OnlyTitle = {
 	args: { title: ArgsMock.title, urlImage: ArgsMock.urlImage },
-	play: async ({ args, canvasElement }) => {
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		const title = canvas.getByText(ArgsMock.title)
 		const desc = canvas.queryByText(ArgsMock.desc)
 
+		expect(title).toBeInTheDocument()
 		expect(desc).toBeNull()
 	},
 } satisfies Story
 
 export const OnlyDesc = {
 	args: { desc: ArgsMock.desc, urlImage: ArgsMock.urlImage },
-	play: async ({ args, canvasElement }) => {
+	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 		const title = canvas.queryByText(ArgsMock.title)
 		const desc = canvas.getByText(ArgsMock.desc)
 
+		expect(desc).toBeInTheDocument()
 		expect(title).toBeNull()
 	},
 } satisfies Story

@@ -13,13 +13,13 @@ export type EpisodeCardProps = {
 
 const EpisodeCard: React.FC<EpisodeCardProps> = ({ episode }) => {
 	const [isPlay, setPlay] = useState(false)
-	const refAudio = useRef(null)
+	const refAudio = useRef<HTMLAudioElement>(null)
 	const handleAudio = () => {
 		if (isPlay) {
-			refAudio.current!.pause()
+			refAudio.current?.pause()
 			setPlay(false)
 		} else {
-			refAudio.current!.play()
+			refAudio.current?.play()
 			setPlay(true)
 		}
 	}
