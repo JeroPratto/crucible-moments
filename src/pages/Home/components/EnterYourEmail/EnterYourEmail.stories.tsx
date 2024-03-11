@@ -9,15 +9,10 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 	},
-	argTypes: {},
 } satisfies Meta<typeof EnterYourEmail>
 
 export default meta
 
 type Story = StoryObj<typeof EnterYourEmail>
 
-export const Default = {
-	args: {
-		// props
-	},
-} satisfies Story
+export const Default = {} satisfies Story

@@ -6,6 +6,7 @@ import {
 	reactRouterParameters,
 	withRouter,
 } from 'storybook-addon-react-router-v6'
+
 const meta = {
 	title: 'Pages/Home/components/EpisodeCard',
 	component: EpisodeCard,
@@ -17,7 +18,7 @@ const meta = {
 			routing: { path: '/' },
 		}),
 	},
-	argTypes: {},
+	argTypes: { episode: { control: 'object' } },
 } satisfies Meta<typeof EpisodeCard>
 
 export default meta

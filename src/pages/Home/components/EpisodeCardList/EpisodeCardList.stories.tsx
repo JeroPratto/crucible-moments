@@ -17,7 +17,9 @@ const meta = {
 			routing: { path: '/' },
 		}),
 	},
-	argTypes: {},
+	argTypes: {
+		episodes: { control: 'array' },
+	},
 } satisfies Meta<typeof EpisodeCardList>
 
 export default meta

@@ -28,7 +28,7 @@ const MenuWrapper: React.FC<MenuWrapperProps> = ({ isOpen, setOpen }) => {
 					</Link>
 					<ul className={styles.list}>
 						{episodes.map((episode, index) => (
-							<li className={styles.item}>
+							<li className={styles.item} key={index}>
 								<span className={styles.number}>E{index + 1}</span>
 								<Link to={episode.url} onClick={closeMenu}>
 									{episode.name}

@@ -18,7 +18,6 @@ const meta = {
 			routing: { path: '/' },
 		}),
 	},
-	argTypes: {},
 } satisfies Meta<typeof Header>
 
 export default meta
@@ -26,7 +25,6 @@ export default meta
 type Story = StoryObj<typeof Header>
 
 export const Home = {
-	args: {},
 	parameters: {
 		reactRouter: reactRouterParameters({
 			location: { path: '/' },
@@ -48,7 +46,6 @@ export const Home = {
 } satisfies Story
 
 export const NotInHome = {
-	args: {},
 	parameters: {
 		reactRouter: reactRouterParameters({
 			routing: { path: '/test' },

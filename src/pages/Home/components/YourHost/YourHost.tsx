@@ -157,11 +157,11 @@ const YourHost: React.FC<YourHostProps> = ({}) => {
 						inspiring to a new generation of ambitious founders—and anyone
 						curious for a new perspective on how to navigate the most important
 						decisions you face when the answers are unclear.
-						<p
+						<span
 							className={`${styles.yourHostOverlay} ${
 								showMore ? styles.hidden : ''
 							}`}
-						></p>
+						></span>
 					</p>
 					<button
 						className={`${styles.continueReading} ${

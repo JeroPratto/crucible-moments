@@ -16,13 +16,10 @@ const meta = {
 			routing: { path: '/' },
 		}),
 	},
-	argTypes: {},
 } satisfies Meta<typeof Footer>
 
 export default meta
 
 type Story = StoryObj<typeof Footer>
 
-export const Default = {
-	args: {},
-} satisfies Story
+export const Default = {} satisfies Story

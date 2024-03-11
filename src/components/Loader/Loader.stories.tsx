@@ -8,15 +8,10 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 	},
-	argTypes: {},
 } satisfies Meta<typeof Loader>
 
 export default meta
 
 type Story = StoryObj<typeof Loader>
 
-export const Default = {
-	args: {
-		// props
-	},
-} satisfies Story
+export const Default = {} satisfies Story

@@ -16,7 +16,6 @@ const meta = {
 			routing: { path: '/episodes/:id' },
 		}),
 	},
-	argTypes: {},
 } satisfies Meta<typeof Episode>
 
 export default meta

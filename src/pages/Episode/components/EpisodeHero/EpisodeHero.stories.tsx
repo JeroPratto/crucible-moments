@@ -9,7 +9,10 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 	},
-	argTypes: {},
+	argTypes: {
+		title: { control: 'text' },
+		urlImage: { control: 'text' },
+	},
 } satisfies Meta<typeof EpisodeHero>
 
 export default meta

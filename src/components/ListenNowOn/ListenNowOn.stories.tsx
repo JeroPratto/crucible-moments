@@ -15,7 +15,13 @@ const meta = {
 			],
 		},
 	},
-	argTypes: {},
+	argTypes: {
+		urlList: { control: 'array' },
+		blackMode: { control: 'boolean' },
+		principal: { control: 'color' },
+		secondary: { control: 'color' },
+		backgroundColor: { control: 'color' },
+	},
 } satisfies Meta<typeof ListenNowOn>
 
 export default meta

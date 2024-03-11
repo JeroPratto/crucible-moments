@@ -9,7 +9,11 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 	},
-	argTypes: {},
+	argTypes: {
+		title: { control: 'text' },
+		audioUrl: { control: 'text' },
+		quote: { control: 'text' },
+	},
 } satisfies Meta<typeof PlayClip>
 
 export default meta

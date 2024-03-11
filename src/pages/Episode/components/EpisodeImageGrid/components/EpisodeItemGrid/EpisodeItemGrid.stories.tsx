@@ -10,7 +10,11 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 	},
-	argTypes: {},
+	argTypes: {
+		title: { control: 'text' },
+		desc: { control: 'text' },
+		urlImage: { control: 'text' },
+	},
 } satisfies Meta<typeof EpisodeItemGrid>
 
 export default meta

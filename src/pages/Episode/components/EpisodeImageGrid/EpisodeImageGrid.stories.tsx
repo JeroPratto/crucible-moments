@@ -9,7 +9,9 @@ const meta = {
 	parameters: {
 		layout: 'fullscreen',
 	},
-	argTypes: {},
+	argTypes: {
+		items: { control: 'array' },
+	},
 } satisfies Meta<typeof EpisodeImageGrid>
 
 export default meta

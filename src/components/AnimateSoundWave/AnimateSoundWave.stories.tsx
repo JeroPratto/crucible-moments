@@ -11,7 +11,9 @@ const meta = {
 			values: [{ name: 'dark', value: '#000' }],
 		},
 	},
-	argTypes: {},
+	argTypes: {
+		isPlay: { control: 'boolean' },
+	},
 } satisfies Meta<typeof AnimateSoundWave>
 
 export default meta
